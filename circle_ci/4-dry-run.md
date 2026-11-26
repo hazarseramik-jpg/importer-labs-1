@@ -13,7 +13,7 @@ In this lab you will use the `dry-run` command to convert a CircleCI pipeline to
 You will be performing a dry run migration against a CircleCI project. Answer the following questions before running this command:
 
 1. What project do you want to convert?
-    - __circleci-demo-ruby-rails__.  This is one of the sample projects avaiable in the CircleCI actions-importer-labs organization.
+    - __circleci-demo-ruby-rails__.  This is one of the sample projects available in the CircleCI actions-importer-labs organization.
 
 2. Where do you want to store the result?
     - __tmp/dry-run__. This can be any path within the working directory that GitHub Actions Importer commands are executed from.
@@ -35,6 +35,8 @@ You will be performing a dry run migration against a CircleCI project. Answer th
     [2022-09-19 19:46:05] Output file(s):                                           
     [2022-09-19 19:46:05]  tmp/dry-run/actions-importer-labs/circleci-demo-ruby-rails/.github/workflows/build_and_test.yml
     ```
+
+    **Note**:  It is expected that you will see "Resource not found" warnings in the output. These warnings are present because you are not a member of the CircleCI organization actions-importer-labs.
 
 4. View the converted workflow:
     - Find `tmp/dry-run/actions-importer-labs/circleci-demo-ruby-rails/.github/workflows` in the file explorer pane in your codespace.

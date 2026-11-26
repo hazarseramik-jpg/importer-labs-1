@@ -4,8 +4,8 @@ In this lab, you will use the `audit` command to get a high-level view of all pr
 
 The `audit` command will perform the following steps:
 
-1. Fetch all of the projects defined in an CircleCI organization.
-2. Convert each pipeline to their equivalent GitHub Actions workflow.
+1. Fetch all of the projects defined in a CircleCI organization.
+2. Convert each pipeline to its equivalent GitHub Actions workflow.
 3. Generate a report that summarizes how complete and complex of a migration is possible with GitHub Actions Importer.
 
 ## Prerequisites
@@ -17,7 +17,7 @@ The `audit` command will perform the following steps:
 
 You will be performing an `audit` for the __actions-importer-labs__ CircleCI organization that was created for the purposes of these labs. Your environment was configured to use this organization during the [configure lab](./1-configure.md). The remaining information needed to perform an `audit` is:
 
-1. Where do we want to store the result?
+1. Where do you want to store the result?
     - __tmp/audit__.  This can be any path within the working directory that GitHub Actions Importer commands are executed from.
 
 ### Steps
@@ -31,6 +31,8 @@ You will be performing an `audit` for the __actions-importer-labs__ CircleCI org
 
 3. The command will list all the files written to disk in green when the command succeeds.
 
+   **Note**:  It is expected that you will see "Resource not found" warnings in the output. These warnings are present because you are not a member of the CircleCI organization actions-importer-labs.
+   
 ## Inspect the output files
 
 1. Find the `audit_summary.md` file in the file explorer.
@@ -194,7 +196,7 @@ Each pipeline will have a variety of files written that include:
 - The converted workflow.
 - Stack traces that can used to troubleshoot a failed pipeline conversion
 
-## Inspect the workflow usage csv file
+## Inspect the workflow usage .csv file
 
 1. Open the `tmp/audit/workflow_usage.csv` file in the file explorer.
 2. This file contains a comma-separated list of all actions, secrets, and runners that are used by each successfully converted pipeline:
